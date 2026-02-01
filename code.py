@@ -7,7 +7,7 @@ data["Size"]=data["Size"].str.replace(" to "," - ").str.extract(r"([+0-9 -]+)")
 data["Size"]=data["Size"].str.replace("-1","Not Classified")
 data["Rating"]=data["Rating"].astype(str).str.replace("-","")
 data["Revenue"]=data["Revenue"].str.extract(r"([$0-9 a-zA-Z]+)").replace("1","Not Classified")
-data["Company Name"]=data["Company Name"].str.extract(r"([A-Za-z0-9-.]+)")
+data["Company Name"]=data["Company Name"].str.extract(r"([A-Za-z0-9-. ]+)")
 data["Industry"]=data["Industry"].str.replace("-1","Not Classified")
 data["Type of ownership"]=data["Type of ownership"].str.replace("-1","Not Classified")
 
